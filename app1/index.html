@@ -23,6 +23,7 @@
     <ul>
         <li ng-repeat="item in items" class="list-group-item">{{item.name}}<br> Features: <span ng-repeat="feature in item.features" class="badge badge-secondary">{{feature}}</span></li>
     </ul>
+    <button class="btn btn-primary" ng-click="addItem()">Add Item</button>
     </div>
 </body>
 </html>

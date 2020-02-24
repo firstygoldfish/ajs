@@ -12,6 +12,11 @@ app.controller('ExpensesViewController', ['$scope', function($scope){
         $scope.person.age++;
     }
 
+    $scope.addItem = function () {
+        $scope.items.push({ name: 'Carl', features: [ 'New Stuff', 'Added' ]});
+        $scope.phrase = $scope.items.indexOf('Carl');
+    }
+
     $scope.items = [
         {
             name: 'ZX Spectrum',
