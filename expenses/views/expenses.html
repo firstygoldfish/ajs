@@ -1,0 +1,23 @@
+<div class="container" ng-controller="ExpensesViewController">
+    <ul class="list-group">
+        <li class="list-group-item">Expenses View</li>                 
+        <table class="table"> 
+            <thead> 
+                <tr> 
+                    <th class="text-left">Date</th> 
+                    <th>Description</th> 
+                    <th class="text-center">Amount</th> 
+                </tr>                         
+            </thead>                     
+            <tbody> 
+                <tr ng-repeat="expense in expenses"> 
+                    <td class="text-left">{{expense.date | date}}</td> 
+                    <td>{{expense.description | uppercase}}</td> 
+                    <td class="text-center">{{expense.amount | currency}}</td>
+                    <col class="pg-empty-placeholder"> 
+                </tr>                         
+            </tbody>                     
+        </table>
+        <li class="list-group-item"> </li>                 
+    </ul>
+</div>
