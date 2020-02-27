@@ -1,2 +1,2 @@
 # ajs
-Carl's AngularJS Learning Projectss
+Carl's AngularJS Learning Projects
