@@ -1,4 +1,4 @@
-<!--<link rel='stylesheet' type='text/css' media='screen' href='../css/bootstrap.min.css'>-->
+<link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.min.css'>
 <div class="container" ng-controller="ExpensesViewController">
     <div>&nbsp;</div>
     <ul class="list-group">
@@ -13,23 +13,13 @@
             </thead>             
             <tbody> 
                 <tr ng-repeat="expense in expenses"> 
-                    <td class="text-left">
-                        <input type="text" class="form-control" placeholder="Date of expense">
-                    </td>                     
-                    <td>
-                        <input type="text" class="form-control" placeholder="Expense">
-                    </td>                     
-                    <td class="text-center">
-                        <input type="text" class="form-control" placeholder="Expense amount">
-                    </td>
+                    <td class="text-left">{{expense.date | date}}</td> 
+                    <td>{{expense.description | uppercase}}</td> 
+                    <td class="text-center">{{expense.amount | currency}}</td>
                     <col class="pg-empty-placeholder"> 
                 </tr>                 
             </tbody>             
         </table>
-        <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-secondary bg-danger">Cancel</button>             
-            <button type="button" class="btn btn-secondary bg-success">Save</button>
-        </div>
         <li class="list-group-item bg-secondary bg-secondary bg-secondary bg-secondary bg-secondary bg-secondary bg-secondary bg-secondary bg-secondary"> </li>         
     </ul>
 </div>
