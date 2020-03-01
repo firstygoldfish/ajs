@@ -44,3 +44,4 @@ app.controller('ExpenseViewController', ['$scope', '$routeParams', function ($sc
   $scope.sometext = 'This will be the new page';
   $scope.id = $routeParams.id;
 }]);
+
