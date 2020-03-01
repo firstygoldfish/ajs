@@ -41,7 +41,15 @@ app.controller('ExpensesViewController', ['$scope', function ($scope) {
 }]);
 
 app.controller('ExpenseViewController', ['$scope', '$routeParams', function ($scope, $routeParams) {
-  $scope.sometext = 'This will be the new page';
-  $scope.id = $routeParams.id;
+   $scope.sometext = 'This will be the new page';
+   $scope.id = $routeParams.id;
+   $scope.saveExpense = function() {
+    if ($scope.newDate == undefined  || $scope.newDesc == undefined || $scope.newAmount == undefined) {
+		alert('All fields are mandatory!');
+	} else {
+		alert('Will do the save here');
+	}
+    };
+
 }]);
 

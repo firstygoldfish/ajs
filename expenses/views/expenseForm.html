@@ -14,13 +14,13 @@
             <tbody> 
                 <tr> 
                     <td class="text-left">
-                        <input type="text" class="form-control" placeholder="Date" required>
+                        <input type="text"  ng-model="newDate" class="form-control" placeholder="Date" required>
                     </td>                     
                     <td>
-                        <input type="text" class="form-control" placeholder="Expense" required>
+                        <input type="text"  ng-model="newDesc" class="form-control" placeholder="Expense" required>
                     </td>                     
                     <td class="text">
-                        <input type="text" class="form-control" placeholder="Amount" required>
+                        <input type="text"  ng-model="newAmount" class="form-control" placeholder="Amount" required>
                     </td>
                     <col class="pg-empty-placeholder"> 
                 </tr>                 
@@ -28,7 +28,7 @@
         </table>
         <div class="btn-group" role="group" aria-label="Basic example">
             <a href="#!epenses" class="btn btn-secondary bg-danger">Cancel</a>             
-            <button type="button" class="btn btn-secondary bg-success">Save</button>
+            <button type="button" ng-click="saveExpense()" class="btn btn-secondary bg-success">Save</button>
         </div> <div>&nbsp;</div>
         <li class="list-group-item bg-secondary bg-secondary bg-secondary bg-secondary bg-secondary bg-secondary bg-secondary bg-secondary bg-secondary"> </li>         
     </ul>
